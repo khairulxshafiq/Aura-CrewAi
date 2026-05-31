@@ -1,0 +1,19 @@
+# ═══ Image Crew Tasks ═══
+prompt_task:
+  description: >
+    Create an optimized image generation prompt for:
+    "{topic}"
+
+    Include:
+    - Main subject description (detailed, specific)
+    - Art style and medium
+    - Lighting and mood
+    - Color palette
+    - Composition details
+    - Negative prompt (what to avoid)
+    - Recommended dimensions
+  expected_output: >
+    A detailed image generation prompt ready to use with AI
+    image generators. Include style, lighting, composition,
+    and negative prompt sections.
+  agent: visual_designer
