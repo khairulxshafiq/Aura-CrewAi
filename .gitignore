@@ -1,33 +1,50 @@
-.DS_Store
-.pytest_cache
-__pycache__
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
 dist/
+build/
+eggs/
+*.egg
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+
+# Environment
 .env
-assets/*
-.idea
-test/
-docs_crew/
-chroma.sqlite3
-old_en.json
-db/
-test.py
-rc-tests/*
-*.pkl
-temp/*
-.vscode/*
-crew_tasks_output.json
-.codesight
-.mypy_cache
-.ruff_cache
-.venv
-test_flow.html
-crewairules.mdc
-plan.md
-conceptual_plan.md
-build_image
-chromadb-*.lock
-.claude
-.crewai/memory
-blogs/*
-secrets/*
-UNKNOWN.egg-info/
+.env.local
+.env.production
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+*.swp
+*.swo
+.idea/
+
+# Railway
+.railway/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Temp
+tmp/
+temp/
+*.tmp
+
+# CrewAI
+.crewai/

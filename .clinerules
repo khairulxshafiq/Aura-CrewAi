@@ -1,0 +1,50 @@
+# ============================================
+# AURA .clinerules — Aura-CrewAi (Python)
+# ============================================
+# CrewAI Agent Orchestration Service
+
+## 📌 Service Info
+- Service Name: aura-crews
+- Stack: Python 3.11+
+- Framework: CrewAI
+- Port: 8000
+- Deploy: Railway (auto-deploy from GitHub)
+- Repo Path: /workspaces/Aura-CrewAi
+
+## 📂 Key Files
+- src/aura_crews/main.py    → Main entry point & API endpoints
+- src/aura_crews/crew.py    → Crew definitions & agent configs
+- src/aura_crews/tools/     → Custom tools for agents
+- pyproject.toml             → Dependencies & project config
+- Procfile                   → Railway start command
+- AGENTS.md                  → Agent documentation
+
+## 🔧 Railway Log Access
+- Command: `railway logs --service aura-crews --limit 100`
+- ALWAYS check logs before and after changes
+
+## 📏 Rules
+
+### Coding Standards
+1. Use async/await for ALL endpoint functions
+2. Use `crew.kickoff_async()` — NEVER use `crew.kickoff()`
+3. All endpoints must return proper JSON responses
+4. Handle errors gracefully with try/except blocks
+5. Use proper Python type hints
+
+### API Endpoints
+6. All endpoints must accept POST requests with JSON body
+7. Response format: {"status": "success/error", "data": ..., "message": ...}
+8. Include proper HTTP status codes
+
+### Dependencies
+9. Add new dependencies to pyproject.toml
+10. NEVER use pip install directly — use pyproject.toml
+
+### Testing
+11. Run tests from: /workspaces/Aura-CrewAi/tests/
+12. Test before pushing any changes
+
+## 🔗 Integration
+- Receives requests FROM: Aura-V.1 (Gateway)
+- Master rules at: /workspaces/Aura-V.1/.clinerules
